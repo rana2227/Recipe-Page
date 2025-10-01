@@ -1,0 +1,112 @@
+:root {
+	--main-color : hsl(14, 45%, 36%);
+	--secondary-color :hsl(30, 54%, 90%);
+    --main-font: 16px;
+    --weight-400:400;
+    --weight-600:600;
+    --weight-700:700;
+}
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.container img {
+    width: 100%;
+    border-radius: 15px;
+}
+.list li, .head, table, .nut p {
+    margin-left: 25px;
+    padding-bottom: 25px;
+}
+.head {
+    padding-top: 30px;
+    color: hsl(332, 51%, 32%);
+}
+.list {
+    list-style-position: inside;
+}
+.list li {
+    color: hsl(30, 10%, 34%);
+}
+@media (min-width: 768px) and (min-width: 991px) { 
+    .container {
+        width: 375px;
+    }
+   }
+   @media (min-width:992px) {
+     .container {
+        width: 320px;
+     }
+   
+   }
+   @media (min-width:1200px) {
+     .container {
+        width: 1440px;
+     }
+   }
+   h1 {
+    font-family: "Young Serif", serif;
+    font-weight: var(--weight-700);
+   }
+   p {
+    font-family: "Young Serif", serif;
+    font-size: var(--main-font);
+    color: hsl(30, 10%, 34%);
+    font-weight: var(--weight-400);
+   }
+/*Preparation*/
+.prep .container{
+    font-family: "Outfit";
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 15px;
+}
+/*Ingredients*/
+
+/*Instructions*/
+.orderd li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    font-family: "Outfit";
+    border-collapse: collapse;
+    
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid hsl(30, 10%, 34%);
+}
+td:first-child {
+    color: hsl(30, 10%, 34%);
+}
+td:last-child{
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+}
+ol {
+    list-style-type: none;
+    counter-reset: section;
+}
+ol li {
+    position: relative;
+    padding-left: 30px;
+   
+}
+ol li::before {
+    counter-increment: section;
+    content: counter(section)".";
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+    position: absolute;
+    left:-30px;
+    padding-left: 25px;
+}
